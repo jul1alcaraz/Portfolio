@@ -1,0 +1,44 @@
+---
+import Badge from "../components/Badge.astro";
+import content from "../data/content.json";
+---
+
+<div class="fondo-comun wrapper">
+    <div class="contenedorImg">
+        <img class="profilePhoto" src={"src/img/" + content.profilePhoto} />
+    </div>
+
+    <div class="flex-item">
+        <h1 class="saludo font-mono">
+            <span>{content.saludo}</span>
+        </h1>
+        <div class="contenedor-centrado">
+            <div class="titulo">Julieta Alcaraz Aballay</div>
+        </div>
+        
+        <!--technologies... -->
+
+        <div class="flex space-x-2 m-10 contenedor-centrado">
+            {
+                content.technologies.map((technology) => (
+                <div class="tooltip">
+                    <img
+                        class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+                        src={"src/img/" + technology.file}
+                        alt=""
+                    />
+                    <span class="tooltiptext">{technology.name}</span>
+                </div>
+                ))
+            }
+        </div>
+
+        <div>
+            <a href={content.linkedin}>
+                <Badge class="encabezado contenedor-centrado">
+                        <button> Disponible para trabajar </button>
+                </Badge>
+            </a>
+        </div>
+    </div>
+</div>

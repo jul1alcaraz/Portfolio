@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Perfil from '../components/Perfil.astro'
+import Estudios from "../components/Estudios.astro";
+import Proyectos from "../components/Proyectos.astro";
+import Experiencia from "../components/Experiencia.astro";
+import Contacto from "../components/Contacto.astro";
+import content from "../data/content.json";
+import Bienvenida from "../components/Bienvenida.astro";
+
+---
+
+<Layout title="Julieta Alcaraz">
+	<main class="w-full">
+		<SectionContainer id="Bienvenida">
+			<Bienvenida/>
+		</SectionContainer>
+
+		<SectionContainer id="Perfil">
+			<Perfil />
+		</SectionContainer>
+		
+		<SectionContainer id="Estudios">
+			<Estudios />
+		</SectionContainer>
+
+		<SectionContainer id="Proyectos">
+			
+			<Proyectos />
+		</SectionContainer>
+
+		<SectionContainer id="Experiencia">
+			<Experiencia />
+		</SectionContainer>
+
+		<SectionContainer id="Contacto">
+		
+			<Contacto />
+		</SectionContainer>
+	</main>
+
+</Layout>

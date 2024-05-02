@@ -1,0 +1,118 @@
+{
+    "title": "¡Hola! Mi nombre es",
+    "saludo": "¡Hola! Soy ",
+    "name": "Julieta Alcaraz Aballay",
+    "oracion": "«Comienza por hacer lo necesario, luego haz lo que es posible y de pronto estarás haciendo lo imposible.»",      
+     "bio": "Licenciada en Producción de Bioimágenes de 26 años de edad nacida en La Rioja, Argentina.\nDesde siempre, mi fascinación por la naturaleza, el estudio y el crecimiento personal han sido una constante en mi vida.\n Ahora, incursionando en el mundo de la programación, comprometida con el aprendizaje continuo y estoy lista para mis próximos desafíos con una mente abierta y receptiva.",
+    "technologies": [
+        {
+            "name": "Astro",
+            "file": "astro.png"
+        },
+        {
+            "name": "CSS",
+            "file": "css.png"
+        },
+        {
+            "name": "HTML",
+            "file": "html.png"
+        },
+        {
+            "name": "JavaScript",
+            "file": "js.png"
+        },
+        {
+            "name": "MongoDB",
+            "file": "mongo.png"
+        },
+        {
+            "name": "MySQL",
+            "file": "mysql.png"
+        },
+        {
+            "name": "NodeJS",
+            "file": "node.png"
+        },
+        {
+            "name": "PHP",
+            "file": "php.png"
+        },
+        {
+            "name": "React",
+            "file": "react.png"
+        },
+        
+        {
+            "name": "Material",
+            "file": "material.png"
+        },
+        {
+            "name": "TailwindCSS",
+            "file": "tailwind.png"
+        }
+    ],
+    "linkedin": "https://www.linkedin.com/in/jul1alcaraz/",
+    "availability": "Disponible para trabajar",
+    "profilePhoto": "1.png",
+
+    "title_proyectos": "Proyectos",
+    "title_contacto": "Contáctame",
+
+    "title_estudios": "ESTUDIOS",
+    "studies": [
+        {
+        "date": "Diciembre 2023",
+        "title": "Full-Stack Junior",
+        "institution": "Innovare training - Universidad Tecnológica Nacional, Facultad Regional Reconquista",
+        "scope": "Desarrollo web full stack con MERN siguiendo SCRUM como metodología ágil. Utilizando las últimas técnologías de desarrollo y diseño para construir un sitio web de eCommerce como trabajo final.",
+        "img": "innovare.png",
+        "link": "https://medium.com/@marceloagustini/curso-full-stack-junior-f1f205fa8ffb"
+        },
+        {
+        "date": "Julio 2023",
+        "title": "Programador Web",
+        "institution": "Centro de e-Learning de la Universidad Tecnológica Nacional, Facultad Regional Buenos Aires",
+        "scope": "Desarrollo de páginas web estableciendo principios sólidos de desarrollo en HTML, CSS, Javascript y PHP. Independizando el entorno de desarrollo y utilizando bases de datos relacionales y escalables.",
+        "img": "utn.png",
+        "link": "https://sceu.frba.utn.edu.ar/e-learning/?_gl=1*1eb149j*_gcl_au*MTQzNjg4NTYxLjE3MTI5ODg3NzA.*_ga*MTI1MDc5MTYxLjE2OTY0NDc3Nzg.*_ga_SWYYXNHY2W*MTcxMzY4MTIzOS4zLjAuMTcxMzY4MTIzOS42MC4wLjA."
+        },
+        {
+        "date": "Diciembre 2023",
+        "title": "Lectura Comprensiva en Inglés para Posgrados",
+        "institution": "Escuela Superior de Lenguas, Universidad Nacional de La Rioja",
+        "scope": "Incorporar como herramienta el análisis crítico de téxtos en lengua inglesa, permitiendo la comunicación por escrito en este lenguaje.",
+        "img": "ingles.jpg",
+        "link":"https://www.instagram.com/escuelasuperiordelenguasunlar?igsh=M3ZqMm13aHlydDF3"
+        },
+        {
+        "date": "Julio 2022",
+        "title": "Licenciatura en Producción de Bioimágenes",
+        "institution": "Universidad Nacional de La Rioja",
+        "scope": "Manejo de radiaciones ionizantes con fines de diagnóstico médico.",
+        "img": "unlar_logo.png",
+        "link": "https://www.unlar.edu.ar/index.php/oferta-academica/carreras-de-grado/281-lic-en-produccion-de-bioimagenes"
+        }
+    ],
+
+
+    "title_experiencia": "Experiencia Laboral",
+    "experiences": [
+        {
+        "duration": "2024 - 2020",
+        "institution": "Division de Sanidad Policial",
+        "position": "Licenciada en Producción de Bioimágenes"
+        },
+        {
+        "duration": "2024 - 2022",
+        "institution": "Colegio Provincial \"Alberto Breyer\"",
+        "position": "Docente"
+        },
+        {
+        "duration": "2023 - 2018",
+        "institution": "Centro Educativo Franciscano (C.E.F.) \"San Francisco de Asís\"",
+        "position": "Preceptora y docente de nivel Inicial, Primario y Secundario"
+        }
+    ],
+
+    "footer": "© 2024 Diseñado y programado en Astro con ❤ por Julieta"
+}

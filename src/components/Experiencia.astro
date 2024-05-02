@@ -1,0 +1,19 @@
+---
+import content from '../data/content.json';
+---
+<h2 class="subTitulo">{content.title_experiencia}</h2>
+
+<div class="flex justify-center mt-5 mb-5 experience">
+    <ol class="relative border-s">
+        {
+            content.experiences.map((experience) => (
+            <li class="mb-10 ms-4">
+                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
+                <time class="desa mb-1 font-normal leading-none text-white dark:text-gray-500">{ experience.duration }</time>
+                <h3 class="font-bold text-2xl text-gray-900 bg-white border">{ experience.institution }</h3>
+                <p class="encabezado mb-4 text-3xl text-white dark:text-white">{ experience.position }</p>
+            </li>
+            ))
+        }
+    </ol>
+</div>

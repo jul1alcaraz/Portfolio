@@ -1,0 +1,50 @@
+---
+import content from "../data/content.json";
+---
+
+<div class="fondo-estudios">
+  <h2 class="subTitulo">{content.title_estudios}</h2>
+  <div class="grid grid-cols-2 p-5 gap-3 hover1">
+    {
+      content.studies.map((study) => (
+        <div class="p-3 m-2 rounded-lg bg-white">
+          <time class="desa text-lg font-semibold text-gray-900 dark:text-white">
+            {study.date}
+          </time>
+          <ol class="mt-3 divide-y divider-gray-200 dark:divide-gray-700">
+            <li>
+              <a
+                href={study.link}
+                class="items-center block p-3 sm:flex"
+              >
+                <img
+                  class="w-12 h-12 mb-3 me-3 rounded-full sm:mb-0"
+                  src={"src/img/" + study.img}
+                  alt="Image placeholder"
+                />
+                <div class="text-gray-600 dark:text-gray-400">
+                  <div class="text-base font-normal">
+                    <span class="encabezado font-medium text-gray-900 dark:text-white">
+                      {study.title}
+                    </span>{" "}
+                    en
+                    <span class="encabezado font-medium text-gray-900 dark:text-white">
+                      {study.institution}
+                    </span>
+                  </div>
+                  <div class="text-sm font-normal">
+                    <span class="encabezado font-medium text-gray-900 dark:text-white">
+                      <br />
+                      Alcance:
+                    </span>{" "}
+                    {study.scope}
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ol>
+        </div>
+      ))
+    }
+  </div>
+</div>
