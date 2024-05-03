@@ -5,7 +5,7 @@ import content from "../data/content.json";
 
 <div class="fondo-comun wrapper">
     <div class="contenedorImg">
-        <img class="profilePhoto" src={"src/img/" + content.profilePhoto} />
+        <img class="profilePhoto" src={"../../public/" + content.profilePhoto} />
     </div>
 
     <div class="flex-item">
@@ -24,7 +24,7 @@ import content from "../data/content.json";
                 <div class="tooltip">
                     <img
                         class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
-                        src={"src/img/" + technology.file}
+                        src={"../../public/" + technology.file}
                         alt=""
                     />
                     <span class="tooltiptext">{technology.name}</span>
