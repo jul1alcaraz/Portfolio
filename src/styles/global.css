@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Text:ital@0;1&display=swap');
 
-/* ========================================================================= */
 /* REGLAS BASE (GENERAL / DESKTOP) */
-/* ========================================================================= */
 
 /* generales */
 html {
@@ -49,7 +47,7 @@ html {
 
 /* bienvenida */
 .fondo-comun {
-    min-height: 100vh; /* CORREGIDO */
+    min-height: 100vh;
 }
 
 .wrapper {
@@ -151,7 +149,7 @@ html {
 /* perfil */
 .fondo-perfil {
     background-color: #16403D;
-    min-height: 100vh; /* CORREGIDO - En desktop, es deseable 100vh */
+    min-height: 100vh;
 }
 
 .waviy {
@@ -172,6 +170,7 @@ html {
 }
 
 @keyframes waviy {
+
     0%,
     40%,
     100% {
@@ -194,7 +193,7 @@ html {
 /* estudios */
 .fondo-estudios {
     background-color: #B88364;
-    min-height: 100vh; /* CORREGIDO */
+    min-height: 100vh;
     padding-bottom: 5vh;
 }
 
@@ -214,14 +213,14 @@ html {
 /* proyectos */
 .fondo-proyectos {
     background-color: #ffffff;
-    min-height: fit-content; /* CORREGIDO */
+    min-height: fit-content;
     padding-bottom: 5rem;
 }
 
 .verde-general {
     color: #16403D;
     transform: translateX(-100%);
-    animation: proyec 3.5s infinite forwards;
+    animation: proyec 3.5s forwards;
 }
 
 @keyframes proyec {
@@ -281,8 +280,14 @@ html {
 .image-container .hover-text,
 .image-container .hover-text2 {
     transition: opacity 0.3s ease;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
 
+/* El resto sigue igual */
 .image-container .hover-text {
     opacity: 0;
 }
@@ -303,7 +308,7 @@ html {
 /* contacto */
 .fondo-contacto {
     background-color: #16403D;
-    min-height: 80vh; /* CORREGIDO */
+    min-height: 80vh;
 }
 
 .subTituloC {
@@ -352,10 +357,9 @@ html {
     max-width: 600px;
 }
 
-/* ========================================================================= */
 /* MEDIA DE TABLET (765px - 1025px) */
-/* ========================================================================= */
 @media only screen and (min-width: 765px) and (max-width: 1025px) {
+
     /* generales */
     html {
         background-image: url("../../public/fondo.png");
@@ -428,7 +432,6 @@ html {
 
     /* perfil */
     .fondo-perfil {
-        /* CORREGIDO: Ajusta la altura al contenido en lugar de forzar 100vh */
         min-height: fit-content;
         padding-top: 5vh;
         padding-bottom: 5vh;
@@ -502,10 +505,9 @@ html {
     }
 }
 
-/* ========================================================================= */
 /* MEDIA DE CELULAR (0px - 767px) */
-/* ========================================================================= */
 @media only screen and (min-width: 0px) and (max-width: 767px) {
+
     /* generales */
     html {
         background-image: url("../../public/fondo.png");
@@ -578,7 +580,6 @@ html {
 
     /* perfil */
     .fondo-perfil {
-        /* CORREGIDO: Ajusta la altura al contenido en lugar de forzar 100vh */
         min-height: fit-content;
         padding-top: 5vh;
         padding-bottom: 5vh;
