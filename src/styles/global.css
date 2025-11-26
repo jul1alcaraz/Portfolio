@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Text:ital@0;1&display=swap');
 
-/*generales*/
+/* ========================================================================= */
+/* REGLAS BASE (GENERAL / DESKTOP) */
+/* ========================================================================= */
+
+/* generales */
 html {
     background-image: url("../../public/fondo.png");
     background-size: cover;
     background-repeat: no-repeat;
-
-    font-family:
-        "poppins" system-ui,
-        sans-serif;
-
+    font-family: "poppins" system-ui, sans-serif;
     scroll-behavior: smooth;
 }
 
-/*header*/
+/* header */
 .menu-header {
     position: fixed;
     top: 0;
@@ -35,7 +35,6 @@ html {
     font-size: medium;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     letter-spacing: 2px;
-
 }
 
 .menu-item {
@@ -48,9 +47,9 @@ html {
     padding: 1.5rem;
 }
 
-/*bienvenida*/
+/* bienvenida */
 .fondo-comun {
-    height: 100vh;
+    min-height: 100vh; /* CORREGIDO */
 }
 
 .wrapper {
@@ -127,7 +126,6 @@ html {
     opacity: 1;
 }
 
-
 @keyframes aparecer {
     0% {
         opacity: 0;
@@ -137,7 +135,6 @@ html {
         opacity: 1;
     }
 }
-
 
 .encabezado {
     letter-spacing: 2px;
@@ -149,14 +146,12 @@ html {
     justify-content: center;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     background-color: #D8C7A2;
-
 }
 
-/*perfil*/
-
+/* perfil */
 .fondo-perfil {
     background-color: #16403D;
-    height: 100vh;
+    min-height: 100vh; /* CORREGIDO - En desktop, es deseable 100vh */
 }
 
 .waviy {
@@ -174,11 +169,9 @@ html {
     text-transform: uppercase;
     animation: waviy 2s infinite;
     animation-delay: calc(.1s * var(--i));
-
 }
 
 @keyframes waviy {
-
     0%,
     40%,
     100% {
@@ -190,22 +183,19 @@ html {
     }
 }
 
-
 .about {
     letter-spacing: 2px;
     color: cornsilk;
     text-align: center;
     padding: 5vh;
     font-size: xx-large;
-
 }
 
-/*estudios*/
-
+/* estudios */
 .fondo-estudios {
     background-color: #B88364;
-    min-height: 100vh; /* Cambiar de height a min-height */
-    padding-bottom: 5vh; /* Añadir espacio inferior */
+    min-height: 100vh; /* CORREGIDO */
+    padding-bottom: 5vh;
 }
 
 .subTitulo {
@@ -221,7 +211,12 @@ html {
     background-color: #D8C7A2;
 }
 
-
+/* proyectos */
+.fondo-proyectos {
+    background-color: #ffffff;
+    min-height: fit-content; /* CORREGIDO */
+    padding-bottom: 5rem;
+}
 
 .verde-general {
     color: #16403D;
@@ -241,41 +236,7 @@ html {
     }
 }
 
-
-.image-container img {
-    transition: opacity 0.3s ease;
-    width: 50vw;
-    height: 50vh;
-}
-
-.image-container .hover-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-
-.image-container:hover .hover-text2 {
-    opacity: 0;
-}
-
-.image-container:hover .hover-text {
-    opacity: 1;
-}
-/*proyectos*/
-.fondo-proyectos {
-    background-color: #ffffff;
-    min-height: 100vh;
-    padding: 5rem 2rem;
-}
-
+/* Estilos de layout de Proyectos */
 .proyectos-layout {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -334,55 +295,15 @@ html {
     opacity: 1;
 }
 
-/* MEDIA DE TABLET */
-@media only screen and (min-width: 765px) and (max-width: 1025px) {
-    .proyectos-layout {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .container-titulo-proyecto {
-        position: relative;
-        top: auto;
-        text-align: center;
-    }
-    
-    .image-container img {
-        height: 40vh;
-    }
+/* experiencia */
+.experience {
+    padding: 2rem;
 }
 
-/* MEDIA DE CELULAR */
-@media only screen and (min-width: 0px) and (max-width: 767px) {
-    .fondo-proyectos {
-        padding: 3rem 1rem;
-    }
-    
-    .proyectos-layout {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .container-titulo-proyecto {
-        position: relative;
-        top: auto;
-        text-align: center;
-        padding: 1rem;
-    }
-    
-    .proyectos-grid {
-        gap: 2rem;
-    }
-    
-    .image-container img {
-        height: 30vh;
-    }
-}
-/*contacto*/
-
+/* contacto */
 .fondo-contacto {
     background-color: #16403D;
-    height: 80vh;
+    min-height: 80vh; /* CORREGIDO */
 }
 
 .subTituloC {
@@ -399,7 +320,7 @@ html {
     border-top-right-radius: 50%;
 }
 
-/*footer*/
+/* footer */
 .pie {
     left: 0;
     bottom: 0;
@@ -415,43 +336,36 @@ html {
     display: block;
 }
 
-
 .desa {
     letter-spacing: 2px;
     font-size: small
 }
 
-
 .columna {
     flex: 1;
     min-width: 200px;
     font-size: x-large;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman",
-        serif;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-
 
 .max-w-custom {
     max-width: 600px;
 }
 
- /*MEDIA DE  TABLET*/
-
-@media only screen and (min-width: 765px) and (max-width:  1025px) {
-    /*generales*/
+/* ========================================================================= */
+/* MEDIA DE TABLET (765px - 1025px) */
+/* ========================================================================= */
+@media only screen and (min-width: 765px) and (max-width: 1025px) {
+    /* generales */
     html {
         background-image: url("../../public/fondo.png");
         background-size: cover;
         background-repeat: no-repeat;
-
-        font-family:
-            "poppins" system-ui,
-            sans-serif;
-
+        font-family: "poppins" system-ui, sans-serif;
         scroll-behavior: smooth;
     }
 
-    /*header*/
+    /* header */
     .menu-header {
         position: fixed;
         top: 0;
@@ -465,35 +379,22 @@ html {
     }
 
     .site-title {
-        display: flex;
         gap: 0.1rem;
-        align-items: center;
-        line-height: 1.1;
-        text-decoration: none;
         font-size: x-small;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-        letter-spacing: 2px;
-
     }
 
     .menu-item {
-        display: flex;
         gap: 1rem;
-        align-items: center;
         font-size: xx-small;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-        font-style: oblique;
         padding: 1rem;
     }
 
-    /*bienvenida*/
+    /* bienvenida */
     .fondo-comun {
-        height: 100vh;
+        min-height: 100vh;
     }
 
     .wrapper {
-        display: flex;
-        flex-wrap: wrap;
         gap: 0.5vh;
     }
 
@@ -503,300 +404,118 @@ html {
     }
 
     .profilePhoto {
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit:contain
+        object-fit: contain
     }
 
     .flex-item {
-        flex: 1;
         padding: 1vh;
     }
 
     .saludo {
         text-align: center;
         padding-top: 9vh;
-        color: aliceblue;
         font-size: medium;
-        font-style: oblique;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-
-    }
-
-    .contenedor-centrado {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
     }
 
     .titulo {
-        letter-spacing: 6px;
-        color: #D8C7A2;
-        font-family: "Bebas Neue", sans-serif;
-        font-weight: 800;
-        font-style: normal;
         font-size: 4vh;
-        animation: aparecer 3.5s forwards;
     }
-
-    .tooltip {
-        position: relative;
-        display: inline-block;
-    }
-
-    .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 120px;
-        background-color: #555;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px;
-        position: absolute;
-        z-index: 1;
-        bottom: 125%;
-        left: 50%;
-        margin-left: -60px;
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
-        opacity: 1;
-    }
-
-
-    @keyframes aparecer {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
 
     .encabezado {
         letter-spacing: 1px;
         font-size: smaller;
     }
 
-    .badge-1 {
-        display: flex;
-        justify-content: center;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-        background-color: #D8C7A2;
-
-    }
-
-    /*perfil*/
-
+    /* perfil */
     .fondo-perfil {
-        background-color: #16403D;
-        height: 100%;
+        /* CORREGIDO: Ajusta la altura al contenido en lugar de forzar 100vh */
+        min-height: fit-content;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
     }
 
     .waviy {
-        position: relative;
         font-size: 5vh;
-        margin-top: 5vh;
-        letter-spacing: 2px;
     }
 
     .waviy span {
-        font-family: "Bebas Neue", sans-serif;
-        position: relative;
-        display: inline-block;
-        color: #fff;
-        text-transform: uppercase;
         animation: waviy 3s infinite;
-        animation-delay: calc(.1s * var(--i));
-
     }
-
-    @keyframes waviy {
-
-        0%,
-        40%,
-        100% {
-            transform: translateY(0)
-        }
-
-        20% {
-            transform: translateY(-20px)
-        }
-    }
-
 
     .about {
         letter-spacing: 3px;
-        color: cornsilk;
-        text-align: center;
-        padding: 5vh;
         font-size: medium;
-
+        padding: 3vh 5vh;
     }
 
-    /*estudios*/
-
+    /* estudios */
     .fondo-estudios {
-        background-color: #B88364;
-        height: 100%;
+        min-height: 100vh;
+        padding-bottom: 5vh;
     }
 
     .subTitulo {
         font-size: 5vh;
-        font-family: "Bebas Neue", sans-serif;
-        color: #f8f7f7;
         letter-spacing: 4px;
-        text-align: right;
-        padding-right: 10vh;
     }
 
-    .hover1 :hover {
-        background-color: #D8C7A2;
-    }
-
-    /*proyectos*/
+    /* proyectos */
     .fondo-proyectos {
-        background-color: #ffffff;
-        height: 160vh;
+        min-height: fit-content;
+        padding-bottom: 5rem;
     }
 
-    .verde-general {
-        color: #16403D;
-        transform: translateX(-100%);
-        animation: proyec 5.5s infinite forwards;
-    }
-
-    @keyframes proyec {
-        0% {
-            opacity: 0;
-            transform: translateX(-100%);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
+    .proyectos-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .container-titulo-proyecto {
-        padding-bottom: 5rem !important;
-    }
-
-    .image-container img {
-        transition: opacity 0.3s ease;
-        width: 100vw;
-        height: 60vh;
-    }
-
-    .image-container .hover-text {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-
-    .image-container:hover .hover-text2 {
-        opacity: 0;
-    }
-
-    .image-container:hover .hover-text {
-        opacity: 1;
-    }
-
-    /*contacto*/
-    .experience{
+        position: relative;
+        top: auto;
+        text-align: center;
         padding: 2rem;
     }
 
+    .verde-general {
+        animation: proyec 5.5s infinite forwards;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 40vh;
+    }
+
+    /* contacto */
     .fondo-contacto {
-        background-color: #16403D;
-        height: 100%;
+        min-height: 80vh;
     }
 
     .subTituloC {
         font-size: 7vh;
-        font-family: "Bebas Neue", sans-serif;
-        color: #f8f7f7;
         letter-spacing: 4px;
-        text-align: center;
-        padding-right: 10vh;
-    }
-    
-    .imgContacto{
-        max-width: 14rem;
     }
 
-    .CardConta {
-        border-top-left-radius: 50%;
-        border-top-right-radius: 50%;
-    }
-
-    /*footer*/
+    /* footer */
     .pie {
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: #16403D;
-        color: white;
-        height: 2em;
         font-size: medium;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-        letter-spacing: 2px;
-        text-align: center;
-        line-height: 2em;
-        display: block;
-    }
-
-
-    .desa {
-        letter-spacing: 2px;
-        font-size: small
-    }
-
-
-    .columna {
-        flex: 1;
-        min-width: 200px;
-        font-size: x-large;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman",
-            serif;
-    }
-
-
-    .max-w-custom {
-        max-width: 600px;
     }
 }
 
- /*MEDIA DE  CELULAR*/
+/* ========================================================================= */
+/* MEDIA DE CELULAR (0px - 767px) */
+/* ========================================================================= */
 @media only screen and (min-width: 0px) and (max-width: 767px) {
-    /*generales*/
+    /* generales */
     html {
         background-image: url("../../public/fondo.png");
         background-size: cover;
         background-repeat: no-repeat;
-
-        font-family:
-            "poppins" system-ui,
-            sans-serif;
-
+        font-family: "poppins" system-ui, sans-serif;
         scroll-behavior: smooth;
     }
 
-    /*header*/
+    /* header */
     .menu-header {
         position: fixed;
         top: 0;
@@ -810,35 +529,22 @@ html {
     }
 
     .site-title {
-        display: flex;
         gap: 0.1rem;
-        align-items: center;
-        line-height: 1.1;
-        text-decoration: none;
         font-size: x-small;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-        letter-spacing: 2px;
-
     }
 
     .menu-item {
-        display: flex;
         gap: 1rem;
-        align-items: center;
         font-size: xx-small;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-        font-style: oblique;
         padding: 1.5rem;
     }
 
-    /*bienvenida*/
+    /* bienvenida */
     .fondo-comun {
-        height: 100%;
+        min-height: 100vh;
     }
 
     .wrapper {
-        display: flex;
-        flex-wrap: wrap;
         gap: 0.5vh;
     }
 
@@ -848,280 +554,102 @@ html {
     }
 
     .profilePhoto {
-        width: 100%;
-        height: 100%;
-        display: block;
         object-fit: cover;
     }
 
     .flex-item {
-        flex: 1;
         padding: 1vh;
     }
 
     .saludo {
         text-align: center;
         padding-top: 5vh;
-        color: aliceblue;
         font-size: medium;
-        font-style: oblique;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    }
-
-    .contenedor-centrado {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
     }
 
     .titulo {
-        letter-spacing: 6px;
-        color: #D8C7A2;
-        font-family: "Bebas Neue", sans-serif;
-        font-weight: 800;
-        font-style: normal;
         font-size: 4vh;
-        animation: aparecer 3.5s forwards;
     }
-
-    .tooltip {
-        position: relative;
-        display: inline-block;
-    }
-
-    .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 120px;
-        background-color: #555;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px;
-        position: absolute;
-        z-index: 1;
-        bottom: 125%;
-        left: 50%;
-        margin-left: -60px;
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
-        opacity: 1;
-    }
-
-
-    @keyframes aparecer {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
 
     .encabezado {
         letter-spacing: 1px;
         font-size: smaller;
     }
 
-    .badge-1 {
-        display: flex;
-        justify-content: center;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-        background-color: #D8C7A2;
-
-    }
-
-    /*perfil*/
-
+    /* perfil */
     .fondo-perfil {
-        background-color: #16403D;
-        height: 100%;
+        /* CORREGIDO: Ajusta la altura al contenido en lugar de forzar 100vh */
+        min-height: fit-content;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
     }
 
     .waviy {
-        position: relative;
         font-size: 5vh;
-        margin-top: 5vh;
-        letter-spacing: 2px;
     }
 
     .waviy span {
-        font-family: "Bebas Neue", sans-serif;
-        position: relative;
-        display: inline-block;
-        color: #fff;
-        text-transform: uppercase;
         animation: waviy 3s infinite;
-        animation-delay: calc(.1s * var(--i));
-
     }
-
-    @keyframes waviy {
-
-        0%,
-        40%,
-        100% {
-            transform: translateY(0)
-        }
-
-        20% {
-            transform: translateY(-20px)
-        }
-    }
-
 
     .about {
         letter-spacing: 3px;
-        color: cornsilk;
-        text-align: center;
-        padding: 5vh;
         font-size: medium;
-
+        padding: 3vh 3vh;
     }
 
-   /* estudios */
-.fondo-estudios {
-    background-color: #B88364;
-    /* CORREGIDO: Usar min-height para que la sección pueda crecer */
-    min-height: 100vh;
-    padding-bottom: 5vh; /* Añadir espacio inferior para separar de proyectos */
-}
-
-.subTitulo {
-    font-size: 5vh;
-    font-family: "Bebas Neue", sans-serif;
-    color: #f8f7f7;
-    letter-spacing: 4px;
-    text-align: right;
-    padding-right: 10vh;
-}
-
-.hover1 :hover {
-    background-color: #D8C7A2;
-}
-
-/* proyectos */
-.fondo-proyectos {
-    background-color: #ffffff;
-    /* CORREGIDO: Usar min-height. fit-content permite que la sección se ajuste a la altura total de los proyectos. */
-    min-height: fit-content;
-    padding-bottom: 5rem; /* Espacio extra al final para separar de la siguiente sección */
-}
-
-.verde-general {
-    color: #16403D;
-    transform: translateX(-100%);
-    animation: proyec 5.5s infinite forwards;
-}
-
-@keyframes proyec {
-    0% {
-        opacity: 0;
-        transform: translateX(-100%);
+    /* estudios */
+    .fondo-estudios {
+        min-height: 100vh;
+        padding-bottom: 5vh;
     }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.container-titulo-proyecto {
-    padding-bottom: 5rem !important;
-}
-
-.image-container img {
-    transition: opacity 0.3s ease;
-    width: 100vw;
-    height: 60vh;
-}
-
-.image-container .hover-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.image-container:hover .hover-text2 {
-    opacity: 0;
-}
-
-.image-container:hover .hover-text {
-    opacity: 1;
-}
-    /*contacto*/
-    .experience{
-        padding: 2rem;
+    .subTitulo {
+        font-size: 5vh;
+        letter-spacing: 4px;
+        padding-right: 5vh;
     }
 
+    /* proyectos */
+    .fondo-proyectos {
+        min-height: fit-content;
+        padding-bottom: 5rem;
+        padding: 3rem 1rem;
+    }
+
+    .proyectos-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .container-titulo-proyecto {
+        position: relative;
+        top: auto;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .verde-general {
+        animation: proyec 5.5s infinite forwards;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 30vh;
+    }
+
+    /* contacto */
     .fondo-contacto {
-        background-color: #16403D;
-        height: 100%;
+        min-height: 80vh;
     }
 
     .subTituloC {
         font-size: 7vh;
-        font-family: "Bebas Neue", sans-serif;
-        color: #f8f7f7;
         letter-spacing: 4px;
-        text-align: center;
-        padding-right: 10vh;
-    }
-    
-    .imgContacto{
-        max-width: 14rem;
     }
 
-    .CardConta {
-        border-top-left-radius: 50%;
-        border-top-right-radius: 50%;
-    }
-
-    /*footer*/
+    /* footer */
     .pie {
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: #16403D;
-        color: white;
-        height: 2em;
         font-size: small;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-        letter-spacing: 2px;
-        text-align: center;
-        line-height: 2em;
-        display: block;
-    }
-
-
-    .desa {
-        letter-spacing: 2px;
-        font-size: small
-    }
-
-
-    .columna {
-        flex: 1;
-        min-width: 200px;
-        font-size: x-large;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman",
-            serif;
-    }
-
-
-    .max-w-custom {
-        max-width: 600px;
     }
 }
