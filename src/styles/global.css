@@ -204,7 +204,8 @@ html {
 
 .fondo-estudios {
     background-color: #B88364;
-    height: 100vh;
+    min-height: 100vh; /* Cambiar de height a min-height */
+    padding-bottom: 5vh; /* Añadir espacio inferior */
 }
 
 .subTitulo {
@@ -220,13 +221,7 @@ html {
     background-color: #D8C7A2;
 }
 
-/*proyectos*/
 
-
-.fondo-proyectos {
-    background-color: #ffffff;
-    height: 100vh;
-}
 
 .verde-general {
     color: #16403D;
@@ -274,7 +269,115 @@ html {
 .image-container:hover .hover-text {
     opacity: 1;
 }
+/*proyectos*/
+.fondo-proyectos {
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 5rem 2rem;
+}
 
+.proyectos-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.container-titulo-proyecto {
+    position: sticky;
+    top: 10rem;
+    padding: 2rem;
+}
+
+.contenedor-proyectos {
+    width: 100%;
+}
+
+.proyectos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.image-container figure {
+    position: relative;
+}
+
+.image-container img {
+    transition: opacity 0.3s ease;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.image-container .hover-text,
+.image-container .hover-text2 {
+    transition: opacity 0.3s ease;
+}
+
+.image-container .hover-text {
+    opacity: 0;
+}
+
+.image-container:hover .hover-text2 {
+    opacity: 0;
+}
+
+.image-container:hover .hover-text {
+    opacity: 1;
+}
+
+/* MEDIA DE TABLET */
+@media only screen and (min-width: 765px) and (max-width: 1025px) {
+    .proyectos-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .container-titulo-proyecto {
+        position: relative;
+        top: auto;
+        text-align: center;
+    }
+    
+    .image-container img {
+        height: 40vh;
+    }
+}
+
+/* MEDIA DE CELULAR */
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .fondo-proyectos {
+        padding: 3rem 1rem;
+    }
+    
+    .proyectos-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .container-titulo-proyecto {
+        position: relative;
+        top: auto;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .proyectos-grid {
+        gap: 2rem;
+    }
+    
+    .image-container img {
+        height: 30vh;
+    }
+}
 /*contacto*/
 
 .fondo-contacto {
@@ -881,84 +984,83 @@ html {
 
     }
 
-    /*estudios*/
+   /* estudios */
+.fondo-estudios {
+    background-color: #B88364;
+    /* CORREGIDO: Usar min-height para que la sección pueda crecer */
+    min-height: 100vh;
+    padding-bottom: 5vh; /* Añadir espacio inferior para separar de proyectos */
+}
 
-    .fondo-estudios {
-        background-color: #B88364;
-        height: 100%;
-    }
+.subTitulo {
+    font-size: 5vh;
+    font-family: "Bebas Neue", sans-serif;
+    color: #f8f7f7;
+    letter-spacing: 4px;
+    text-align: right;
+    padding-right: 10vh;
+}
 
-    .subTitulo {
-        font-size: 5vh;
-        font-family: "Bebas Neue", sans-serif;
-        color: #f8f7f7;
-        letter-spacing: 4px;
-        text-align: right;
-        padding-right: 10vh;
-    }
+.hover1 :hover {
+    background-color: #D8C7A2;
+}
 
-    .hover1 :hover {
-        background-color: #D8C7A2;
-    }
+/* proyectos */
+.fondo-proyectos {
+    background-color: #ffffff;
+    /* CORREGIDO: Usar min-height. fit-content permite que la sección se ajuste a la altura total de los proyectos. */
+    min-height: fit-content;
+    padding-bottom: 5rem; /* Espacio extra al final para separar de la siguiente sección */
+}
 
-    /*proyectos*/
+.verde-general {
+    color: #16403D;
+    transform: translateX(-100%);
+    animation: proyec 5.5s infinite forwards;
+}
 
-
-    .fondo-proyectos {
-        background-color: #ffffff;
-        height: 160vh;
-    }
-
-    .verde-general {
-        color: #16403D;
+@keyframes proyec {
+    0% {
+        opacity: 0;
         transform: translateX(-100%);
-        animation: proyec 5.5s infinite forwards;
     }
 
-    @keyframes proyec {
-        0% {
-            opacity: 0;
-            transform: translateX(-100%);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    .container-titulo-proyecto {
-        padding-bottom: 5rem !important;
-    }
-
-    .image-container img {
-        transition: opacity 0.3s ease;
-        width: 100vw;
-        height: 60vh;
-    }
-
-    .image-container .hover-text {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-
-    .image-container:hover .hover-text2 {
-        opacity: 0;
-    }
-
-    .image-container:hover .hover-text {
+    100% {
         opacity: 1;
+        transform: translateX(0);
     }
+}
 
+.container-titulo-proyecto {
+    padding-bottom: 5rem !important;
+}
+
+.image-container img {
+    transition: opacity 0.3s ease;
+    width: 100vw;
+    height: 60vh;
+}
+
+.image-container .hover-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .hover-text2 {
+    opacity: 0;
+}
+
+.image-container:hover .hover-text {
+    opacity: 1;
+}
     /*contacto*/
     .experience{
         padding: 2rem;

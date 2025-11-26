@@ -1,16 +1,35 @@
-<div class="fondo-proyectos relative ">
-    <div class="container-titulo-proyecto lg:pt-40">
+<div class="fondo-proyectos">
+  <div class="proyectos-layout">
+    
+    <div class="container-titulo-proyecto">
       <h1 class="waviy verde-general text-4xl font-bold sm:text-6xl">
         MIS <br />
         PROYECTOS
       </h1>
     </div>
 
-    <div
-      class="absolute  lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8"
-    >
-      <div class="h-screen lg:gap-y-8">
-        <div class="flex justify-center image-container">
+    <div class="contenedor-proyectos">
+      <div class="proyectos-grid">
+        
+        <div class="image-container">
+          <figure class="grayscale hover:grayscale-0">
+            <a href="https://gestor-escuela-front.vercel.app/">
+              <img
+                src="/gestorEscolar.png"
+                alt="Gestor Escolar"
+                class="h-full w-full object-center duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+              />
+            </a>
+            <figcaption class="encabezado absolute px-4 text-lg text-black top-6">
+              <p class="hover-text2">Página web de gestión de alumnos y materias.</p>
+              <p class="hover-text">
+                Desarrollado con MONGO + EXPRESS + REACT + NODE.JS
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="image-container">
           <figure class="grayscale hover:grayscale-0">
             <a href="https://puma-store-ten.vercel.app/">
               <img
@@ -19,9 +38,7 @@
                 class="h-full w-full object-center duration-300 cursor-pointer filter grayscale hover:grayscale-0"
               />
             </a>
-            <figcaption
-              class="encabezado absolute px-4 text-lg text-white bottom-6 right-6"
-            >
+            <figcaption class="encabezado absolute px-4 text-lg text-white bottom-6 right-6">
               <p class="hover-text2">Diseño Web Ecommerce.</p>
               <p class="hover-text">
                 Desarrollado con React + NodeJS + MongoDB + Material
@@ -30,7 +47,7 @@
           </figure>
         </div>
 
-        <div class="flex justify-center image-container">
+        <div class="image-container">
           <figure class="grayscale hover:grayscale-0">
             <a href="https://harmed-roars.000webhostapp.com/index.php">
               <img
@@ -39,9 +56,7 @@
                 class="h-full w-full object-center duration-300 cursor-pointer filter grayscale hover:grayscale-0"
               />
             </a>
-            <figcaption
-              class="encabezado absolute px-4 text-lg text-black top-6"
-            >
+            <figcaption class="encabezado absolute px-4 text-lg text-black top-6">
               <p class="hover-text2">Página web de concientización animal.</p>
               <p class="hover-text">
                 Desarrollado con HTML + CSS + JS + PHP + MySQL
@@ -49,6 +64,9 @@
             </figcaption>
           </figure>
         </div>
+        
       </div>
     </div>
+
+  </div>
 </div>

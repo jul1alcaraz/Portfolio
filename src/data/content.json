@@ -3,7 +3,7 @@
     "saludo": "¡Hola! Soy ",
     "name": "Julieta Alcaraz Aballay",
     "oracion": "«Comienza por hacer lo necesario, luego haz lo que es posible y de pronto estarás haciendo lo imposible.»",      
-     "bio": "Licenciada en Producción de Bioimágenes de 26 años de edad nacida en La Rioja, Argentina.\nDesde siempre, mi fascinación por la naturaleza, el estudio y el crecimiento personal han sido una constante en mi vida.\n Ahora, incursionando en el mundo de la programación, comprometida con el aprendizaje continuo y estoy lista para mis próximos desafíos con una mente abierta y receptiva.",
+     "bio": "Licenciada en Producción de Bioimágenes de 28 años de edad nacida en La Rioja, Argentina.\nDesde siempre, mi fascinación por la naturaleza, el estudio y el crecimiento personal han sido una constante en mi vida.\n Ahora, incursionando en el mundo de la programación, comprometida con el aprendizaje continuo y estoy lista para mis próximos desafíos con una mente abierta y receptiva.",
     "technologies": [
         {
             "name": "Astro",
@@ -61,6 +61,20 @@
     "title_estudios": "ESTUDIOS",
     "studies": [
         {
+        "date": "Noviembre 2025",
+        "title": "MERN Stack Developer",
+        "institution": "Pilar Tecno - Polo Tecnológico",
+        "scope": "Programa de formación profesional impulsado por el Ministerio de Trabajo y la UNLaR. Especialización en desarrollo Full Stack con MongoDB, Express, React, Node.js y React Native. Entrenamiento en metodologías ágiles (Scrum), Git/GitHub y soft skills para inserción laboral en la industria IT.",
+        "img": "pilartecno.png",
+        "link": "https://www.proyectopilartecno.com/"},
+        {
+       "date": "Agosto 2024",
+        "title": "Data Analytics",
+        "institution": "CoderHouse",
+        "scope": "Análisis, limpieza y visualización de datos para la toma de decisiones. Dominio de SQL para consultas a bases de datos y Power BI para la creación de tableros de control y Data Storytelling.",
+        "img": "coderhouse.png",
+        "link": "https://www.coderhouse.com/online/data-analytics"},
+        {
         "date": "Diciembre 2023",
         "title": "Full-Stack Junior",
         "institution": "Innovare training - Universidad Tecnológica Nacional, Facultad Regional Reconquista",
@@ -98,17 +112,17 @@
     "title_experiencia": "Experiencia Laboral",
     "experiences": [
         {
-        "duration": "2024 - 2020",
+        "duration": "2020 - actualidad",
         "institution": "Division de Sanidad Policial",
         "position": "Licenciada en Producción de Bioimágenes"
         },
         {
-        "duration": "2024 - 2022",
+        "duration": "2022 - 2024",
         "institution": "Colegio Provincial \"Alberto Breyer\"",
         "position": "Docente"
         },
         {
-        "duration": "2023 - 2018",
+        "duration": "2018 - 2023",
         "institution": "Centro Educativo Franciscano (C.E.F.) \"San Francisco de Asís\"",
         "position": "Preceptora y docente de nivel Inicial, Primario y Secundario"
         }
